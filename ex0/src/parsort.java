@@ -28,7 +28,6 @@ public class parsort {
             throw new IllegalArgumentException("Expected 2 arguments");
         }
         ArrayList<Long> nums = new ArrayList<Long>(); // Create an ArrayList object
-        ArrayList<Long> sorted = new ArrayList<Long>(); // Create an ArrayList object
         nums = readIntegerFile(args[0]);
         
 
@@ -41,19 +40,8 @@ public class parsort {
         forkJoinPool.invoke(new QuickSortTask(numsArr, 0, numsArr.length - 1));
         System.out.println(String.format("Quicksort %d", (System.nanoTime() - time) / 1000));
 
-		
-		sorted = readIntegerFile("sorted.txt");
-		Long[] sortedArr = new Long[sorted.size()];
-        sorted.toArray(sortedArr);
-        if (nums.size() != sorted.size()) {
-            throw new UnknownError("Sizes don't match");
-        }
-        if (!Arrays.equals(numsArr, sortedArr)) {
-            throw new UnknownError("Sort failed");
-        }
-
         for (Long num : sorted) {
-            System.out.println(num);
+            //System.out.println(num);
         }
     }
 }
