@@ -1,0 +1,2 @@
+#!/bin/sh
+java parsort $1 $2
