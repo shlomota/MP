@@ -41,7 +41,7 @@ public class parsort {
         System.out.println(String.format("Quicksort %d", (System.nanoTime() - time) / 1000));
 
         for (Long num : numsArr) {
-            //System.out.println(num);
+            System.out.println(num);
         }
     }
 }
