@@ -40,7 +40,7 @@ public class parsort {
         forkJoinPool.invoke(new QuickSortTask(numsArr, 0, numsArr.length - 1));
         System.out.println(String.format("Quicksort %d", (System.nanoTime() - time) / 1000));
 
-        for (Long num : sorted) {
+        for (Long num : numsArr) {
             //System.out.println(num);
         }
     }
